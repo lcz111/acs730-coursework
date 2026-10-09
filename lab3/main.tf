@@ -24,7 +24,7 @@ provider "aws" {
 resource "aws_ssm_parameter" "lab3_demo" {
   name  = "/acs730/lab3/demo"
   type  = "String"
-  value = "Created from workstation"
+  value = "Updated by GitHub Actions"
 
   tags = {
     Project = "ACS730-Lab3"
