@@ -1,5 +1,5 @@
 # Lab 3
 
-Instructions for this section will be provided in class and on Blackboard when we reach it.
+In a real AWS account, GitHub Actions should use OIDC to obtain short-lived AWS credentials without storing long-lived access keys as GitHub secrets.
 
-Put your work for Lab 3 in this folder.
+In AWS Academy, IAM restrictions prevent us from configuring OIDC, so we use session-scoped AWS credentials stored as GitHub Actions secrets, whose limited lifetime reduces the potential damage if they are leaked.
