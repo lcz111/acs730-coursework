@@ -28,3 +28,4 @@ The optimized Dockerfile also used a pinned Python base image, an exec-form CMD,
 
 - evidence/image-sizes.png: Screenshot comparing naive and optimized Docker image sizes.
 
+
