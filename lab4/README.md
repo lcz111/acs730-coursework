@@ -72,3 +72,9 @@ Therefore, Docker layer caching is worth keeping for future development, while p
 
 All measurements were calculated from GitHub Actions job and step timestamps.
 
+
+## Part 10 — Composite Action and Reusable Workflow
+
+I used a composite action for Python dependency setup because Python installation, pip caching, and dependency installation must run on the same runner as the tests.
+
+I used a reusable workflow for Docker image building and publishing because it represents a complete job that requires its own runner and `packages: write` permission, which the test job does not need.
