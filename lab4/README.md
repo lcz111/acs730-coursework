@@ -78,3 +78,57 @@ All measurements were calculated from GitHub Actions job and step timestamps.
 I used a composite action for Python dependency setup because Python installation, pip caching, and dependency installation must run on the same runner as the tests.
 
 I used a reusable workflow for Docker image building and publishing because it represents a complete job that requires its own runner and `packages: write` permission, which the test job does not need.
+
+## Build and Run Instructions
+
+Build the optimized image:
+
+    docker build -t acs730-lab4:local lab4/
+
+Run the container:
+
+    docker run -d --name acs730-lab4-app -p 8000:8000 acs730-lab4:local
+
+Check the health endpoint:
+
+    curl http://localhost:8000/healthz
+
+The application listens on port 8000. The `/healthz` endpoint is used by the CI smoke test.
+
+Remove the container:
+
+    docker rm -f acs730-lab4-app
+
+## Why GHCR Uses SHA Tags
+
+The workflow publishes Docker images to GitHub Container Registry (GHCR) using tags derived from the Git commit SHA rather than `latest`.
+
+SHA-based tags identify the source commit, improve traceability, and make rollback easier. The `latest` tag can change over time and does not identify the exact source version.
+
+## GitHub Actions vs AWS-Native CI/CD
+
+GitHub Actions uses GitHub-hosted runners to execute tests, build Docker images, and publish images to GHCR. Publishing uses the temporary GITHUB_TOKEN with limited permissions.
+
+An AWS-native alternative would use AWS CodePipeline to coordinate stages, AWS CodeBuild to execute tests and Docker builds, and Amazon ECR to store container images.
+
+GitHub-hosted runners execute outside AWS and can use GITHUB_TOKEN for GHCR or OIDC-based temporary AWS credentials. CodeBuild uses AWS-managed build environments and normally authenticates to AWS services through an IAM service role.
+
+AWS Academy restricts IAM write operations, making it difficult to create the service roles required for a complete AWS-native pipeline. Therefore, GitHub Actions and GHCR were more practical for this lab. With appropriate IAM permissions, CodePipeline, CodeBuild, and ECR would be a suitable alternative for AWS-hosted workloads.
+
+## Experiments
+
+### Experiment 1: Invert the Layer Order
+
+**Prediction:** Moving `COPY app.py ./` before dependency installation would invalidate the pip installation layer after a code-only change, making subsequent rebuilds slower.
+
+**Observation:** After modifying `app.py`, Docker reran `pip install` instead of using the cached layer; dependency installation took 3.8 seconds, compared with 4.9 seconds during the initial build.
+
+**Explanation:** Because Docker cache depends on preceding layers, changing `app.py` invalidated all subsequent layers, including dependency installation. Keeping application code after the dependency layer avoids this unnecessary work.
+
+### Experiment 2: Remove the .dockerignore
+
+**Prediction:** Removing `.dockerignore` would allow more files into the build context, but I expected the optimized image size to remain nearly unchanged because its Dockerfile copies only specific files.
+
+**Observation:** The rebuilt optimized image remained 130 MB, and `ls -a /app` showed only `app.py` and `requirements.txt`. BuildKit reported 181 B of transferred context during the no-cache build, so an increase in transferred context was not observed.
+
+**Explanation:** Unlike the naive Dockerfile, which uses `COPY . .`, the optimized Dockerfile explicitly copies only the application and requirements files. Therefore, excluding unrelated files is less important for the final image size, although `.dockerignore` remains useful for reducing unnecessary build-context exposure.
