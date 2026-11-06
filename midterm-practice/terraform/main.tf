@@ -5,6 +5,19 @@
 #
 # This configuration does not currently pass `terraform validate`. Tasks 3 and 4.
 
+
+
+terraform {
+  required_version = ">= 1.10.0, < 2.0.0"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 variable "aws_region" {
   description = "Region to deploy into. LocalStack ignores it, but the provider still requires one."
   type        = string
@@ -40,6 +53,7 @@ variable "public_subnets" {
     cidr_block        = string
     availability_zone = string
   }))
+
   default = {
     web-a = {
       cidr_block        = "10.30.1.0/24"
@@ -85,7 +99,7 @@ variable "localstack_endpoint" {
 provider "aws" {
   region = var.aws_region
 
-  # LocalStack wants the shape of a credential, not a real one.
+  # LocalStack uses dummy credentials, not real AWS credentials.
   access_key = var.use_localstack ? "test" : null
   secret_key = var.use_localstack ? "test" : null
 
@@ -95,14 +109,10 @@ provider "aws" {
 
   s3_use_path_style = var.use_localstack
 
-  dynamic "endpoints" {
-    for_each = var.use_localstack ? [var.localstack_endpoint] : []
-
-    content {
-      ec2 = endpoints.value
-      s3  = endpoints.value
-      sts = endpoints.value
-    }
+  endpoints {
+    ec2 = var.use_localstack ? var.localstack_endpoint : null
+    s3  = var.use_localstack ? var.localstack_endpoint : null
+    sts = var.use_localstack ? var.localstack_endpoint : null
   }
 
   default_tags {
@@ -170,7 +180,7 @@ resource "aws_route_table" "public" {
 resource "aws_route_table_association" "public" {
   for_each = var.public_subnets
 
-  subnet_id      = aws_subnet.public.id
+  subnet_id      = aws_subnet.public[each.key].id
   route_table_id = aws_route_table.public.id
 }
 
@@ -180,7 +190,7 @@ resource "aws_security_group" "web" {
   vpc_id      = aws_vpc.main.id
 
   dynamic "ingress" {
-    for_each = var.ingress_port
+    for_each = var.ingress_ports
 
     content {
       description = "Inbound TCP ${ingress.value}"
