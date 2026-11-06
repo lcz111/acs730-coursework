@@ -1,0 +1,103 @@
+name: Lab 5 Terraform CI
+
+on:
+  pull_request:
+    paths:
+      - "lab5/**"
+      - ".github/workflows/lab5-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "lab5/**"
+      - ".github/workflows/lab5-ci.yml"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: lab5
+
+jobs:
+  gates:
+    name: gates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+          terraform_wrapper: false
+
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      - name: Terraform Init
+        run: terraform init -backend=false -input=false
+
+      - name: Terraform Validate
+        run: terraform validate
+
+  localstack:
+    name: localstack
+    needs: gates
+    runs-on: ubuntu-latest
+
+    services:
+      localstack:
+        image: localstack/localstack:3.8
+        ports:
+          - 4566:4566
+        env:
+          SERVICES: ec2,s3,sts,iam
+        options: >-
+          --health-cmd "curl -f http://localhost:4566/_localstack/health"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+          terraform_wrapper: false
+
+      - name: Wait for LocalStack
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:4566/_localstack/health; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
+
+      - name: Terraform Init
+        run: terraform init -backend=false -input=false
+
+      - name: Terraform Plan
+        run: terraform plan -input=false -var-file=localstack.tfvars -out=tfplan
+
+      - name: Terraform Apply
+        run: terraform apply -input=false -auto-approve tfplan
+
+      - name: Terraform Output
+        run: terraform output
+
+      - name: Terraform Destroy
+        if: always()
+        run: |
+          if [ -f terraform.tfstate ]; then
+            terraform destroy -auto-approve -input=false -var-file=localstack.tfvars
+          else
+            echo "No Terraform state found; skipping destroy."
+          fi
