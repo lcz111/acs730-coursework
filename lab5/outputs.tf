@@ -28,3 +28,7 @@ output "provider_target" {
   description = "Shows whether Terraform targeted LocalStack or real AWS"
   value       = local.provider_target
 }
+
+output "ci_failure_demo" {
+value = "intentional failure"
+}
