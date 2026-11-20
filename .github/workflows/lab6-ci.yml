@@ -1,0 +1,63 @@
+name: Lab 6 CI
+
+on:
+  push:
+    branches:
+      - lab6
+    paths:
+      - "lab6/**"
+      - ".github/workflows/lab6-ci.yml"
+
+  pull_request:
+    paths:
+      - "lab6/**"
+      - ".github/workflows/lab6-ci.yml"
+
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+
+      - name: Terraform Init
+        working-directory: lab6/terraform
+        run: terraform init -backend=false -input=false
+
+      - name: Terraform Validate
+        working-directory: lab6/terraform
+        run: terraform validate
+
+      - name: Install Ansible
+        run: |
+          python -m pip install "ansible-core==2.18.20"
+
+      - name: Validate Ansible Playbook
+        working-directory: lab6/packer
+        run: |
+          ANSIBLE_ROLES_PATH="$PWD/../ansible/roles" \
+          ansible-playbook --syntax-check \
+            -i 'localhost,' packer-playbook.yml
+
+      - name: Setup Packer
+        uses: hashicorp/setup-packer@main
+        with:
+          version: "1.11.2"
+
+      - name: Packer Init
+        working-directory: lab6/packer
+        run: packer init .
+
+      - name: Packer Validate
+        working-directory: lab6/packer
+        run: |
+          packer fmt -check .
+          packer validate .
