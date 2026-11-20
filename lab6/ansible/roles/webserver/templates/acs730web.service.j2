@@ -1,0 +1,22 @@
+[Unit]
+Description=ACS730 Lab 6 Python Web Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=acs730web
+Group=acs730web
+WorkingDirectory=/opt/acs730web/site
+
+ExecStart=/usr/bin/python3 -m http.server 80 --bind 0.0.0.0 --directory /opt/acs730web/site
+
+Restart=always
+RestartSec=5
+
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

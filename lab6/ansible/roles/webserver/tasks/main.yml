@@ -1,0 +1,47 @@
+---
+- name: Install Python and required packages
+  ansible.builtin.dnf:
+    name:
+      - python3
+    state: present
+
+- name: Create dedicated web service user
+  ansible.builtin.user:
+    name: acs730web
+    system: true
+    shell: /sbin/nologin
+    create_home: true
+    home: /opt/acs730web
+    state: present
+
+- name: Create web application directory
+  ansible.builtin.file:
+    path: /opt/acs730web/site
+    state: directory
+    owner: acs730web
+    group: acs730web
+    mode: "0755"
+
+- name: Deploy web page from Jinja2 template
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: /opt/acs730web/site/index.html
+    owner: acs730web
+    group: acs730web
+    mode: "0644"
+
+- name: Deploy systemd web service
+  ansible.builtin.template:
+    src: acs730web.service.j2
+    dest: /etc/systemd/system/acs730web.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart web service
+
+- name: Enable and start web service
+  ansible.builtin.systemd_service:
+    name: acs730web
+    enabled: true
+    state: started
+    daemon_reload: true

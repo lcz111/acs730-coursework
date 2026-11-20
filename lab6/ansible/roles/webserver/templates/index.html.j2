@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACS730 Lab 6</title>
+</head>
+<body>
+    <h1>ACS730 Lab 6 - Ansible Web Server</h1>
+
+    <h2>Server Information</h2>
+
+    <p>Instance ID: {{ inventory_hostname }}</p>
+    <p>Hostname: {{ ansible_hostname }}</p>
+    <p>Operating System: {{ ansible_distribution }}</p>
+
+    <p>Configured automatically using Ansible and AWS SSM.</p>
+</body>
+</html>
