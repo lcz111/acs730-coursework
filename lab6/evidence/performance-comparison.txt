@@ -1,0 +1,23 @@
+ACS730 Lab 6 - Performance Comparison
+
+Method 1: Terraform + Ansible
+- Terraform creates EC2 instances.
+- Ansible configures the web server after deployment.
+- Measured Ansible convergence time: 34 seconds.
+- This excludes EC2 provisioning time.
+
+Method 2: Packer Golden AMI
+- Packer builds an AMI with the web server preconfigured.
+- Packer build time: 4 minutes 50 seconds.
+- Golden AMI ID: ami-03fb0c49f2e5c0aa5
+- Golden AMI test instance: i-0ce05627664aa1426
+- HTTP verification: 200 OK.
+- No additional Ansible playbook was required after launch.
+- Exact time from instance launch to HTTP readiness was not measured.
+
+Conclusion:
+The Golden AMI approach eliminates the need to run Ansible
+after launching a new instance. However, a numerical startup
+speed improvement cannot be calculated from the available
+measurements because the two recorded durations measure
+different stages of the deployment process.
