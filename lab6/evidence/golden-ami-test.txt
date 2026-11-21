@@ -1,0 +1,25 @@
+Golden AMI Test
+AMI ID: ami-03fb0c49f2e5c0aa5
+Instance ID: i-0ce05627664aa1426
+Private IP: 172.31.5.44
+
+HTTP Status: 200
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACS730 Lab 6</title>
+</head>
+<body>
+    <h1>ACS730 Lab 6 - Ansible Web Server</h1>
+
+    <h2>Server Information</h2>
+
+    <p>Instance ID: default</p>
+    <p>Hostname: ip-172-31-10-35</p>
+    <p>Operating System: Amazon</p>
+
+    <p>Configured automatically using Ansible and AWS SSM.</p>
+</body>
+</html>

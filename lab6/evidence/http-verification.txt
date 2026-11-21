@@ -1,0 +1,6 @@
+ACS730 Lab 6 - HTTP Verification
+================================
+Testing 172.31.26.112
+HTTP Status: 200
+Testing 172.31.26.17
+HTTP Status: 200

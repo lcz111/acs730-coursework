@@ -1,0 +1,40 @@
+[DEPRECATION WARNING]: The 'tags' host variable is deprecated. Use 'ec2_tags' 
+instead. This feature will be removed from amazon.aws in a release after 
+2026-12-01. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+[WARNING]: Found variable using reserved name: tags
+
+PLAY [Configure Lab 6 web servers using Ansible Role] **************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [i-054a9773f056fe112]
+ok: [i-0b5692f01a49b4d01]
+
+TASK [webserver : Install Python and required packages] ************************
+ok: [i-0b5692f01a49b4d01]
+ok: [i-054a9773f056fe112]
+
+TASK [webserver : Create dedicated web service user] ***************************
+ok: [i-0b5692f01a49b4d01]
+ok: [i-054a9773f056fe112]
+
+TASK [webserver : Create web application directory] ****************************
+ok: [i-054a9773f056fe112]
+ok: [i-0b5692f01a49b4d01]
+
+TASK [webserver : Deploy web page from Jinja2 template] ************************
+ok: [i-0b5692f01a49b4d01]
+ok: [i-054a9773f056fe112]
+
+TASK [webserver : Deploy systemd web service] **********************************
+ok: [i-0b5692f01a49b4d01]
+ok: [i-054a9773f056fe112]
+
+TASK [webserver : Enable and start web service] ********************************
+ok: [i-0b5692f01a49b4d01]
+ok: [i-054a9773f056fe112]
+
+PLAY RECAP *********************************************************************
+i-054a9773f056fe112        : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+i-0b5692f01a49b4d01        : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

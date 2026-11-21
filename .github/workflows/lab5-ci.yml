@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "lab5/**"
+      - "lab6/**"
       - ".github/workflows/lab5-ci.yml"
   push:
     branches:
