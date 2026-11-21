@@ -1,0 +1,44 @@
+          [31m-[0m[0m "Name"   = "acs730-lab6-web-sg"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0d87b3c5adb6f49d0" [90m-> null[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 3 to destroy.
+[0m[0m[1maws_instance.lab6_web[1]: Destroying... [id=i-0b5692f01a49b4d01][0m[0m
+[0m[1maws_instance.lab6_web[0]: Destroying... [id=i-04d983a503dc4c61e][0m[0m
+[0m[1maws_instance.lab6_web[1]: Still destroying... [id=i-0b5692f01a49b4d01, 10s elapsed][0m[0m
+[0m[1maws_instance.lab6_web[0]: Still destroying... [id=i-04d983a503dc4c61e, 10s elapsed][0m[0m
+[0m[1maws_instance.lab6_web[1]: Still destroying... [id=i-0b5692f01a49b4d01, 20s elapsed][0m[0m
+[0m[1maws_instance.lab6_web[0]: Still destroying... [id=i-04d983a503dc4c61e, 20s elapsed][0m[0m
+[0m[1maws_instance.lab6_web[0]: Destruction complete after 30s[0m
+[0m[1maws_instance.lab6_web[1]: Still destroying... [id=i-0b5692f01a49b4d01, 30s elapsed][0m[0m
+[0m[1maws_instance.lab6_web[1]: Destruction complete after 30s[0m
+[0m[1maws_security_group.lab6_web: Destroying... [id=sg-0edd000012325c687][0m[0m
+[0m[1maws_security_group.lab6_web: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 3 destroyed.
+[0m{
+    "Return": true,
+    "DeleteSnapshotResults": []
+}
+remove_bucket: acs730-lab6-ssm-195356629135
+
+== EC2 instances
+   i-019f9a4f522b7d27c  running  t3.small  acs730-workstation   (your workstation -- keep this)
+
+== Your AMIs (and their snapshots)
+
+== Unattached EBS volumes
+
+== Snapshots you own
+
+== Non-default security groups
+   sg-076e95b182db6d659  launch-wizard-1
+      -> aws ec2 delete-security-group --group-id sg-076e95b182db6d659
+
+== Terraform state files that still track resources
+   ./midterm-practice/terraform/terraform.tfstate  tracks 1 resource(s)
+      -> cd ./midterm-practice/terraform && terraform destroy
+
+Review the items above. This script deleted nothing.
+
