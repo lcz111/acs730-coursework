@@ -1,0 +1,668 @@
+Deploy Production	Set up job	﻿2026-11-27T20:54:49.9497825Z Current runner version: '2.338.2'
+Deploy Production	Set up job	2026-11-27T20:54:49.9525436Z ##[group]Runner Image Provisioner
+Deploy Production	Set up job	2026-11-27T20:54:49.9526403Z Hosted Compute Agent
+Deploy Production	Set up job	2026-11-27T20:54:49.9527152Z Version: 20261111.635
+Deploy Production	Set up job	2026-11-27T20:54:49.9527876Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Deploy Production	Set up job	2026-11-27T20:54:49.9528750Z Build Date: 2026-11-11T01:49:01Z
+Deploy Production	Set up job	2026-11-27T20:54:49.9529769Z Worker ID: {c8cd896b-920e-4648-921e-69e2fe9dbea9}
+Deploy Production	Set up job	2026-11-27T20:54:49.9530546Z Region: westus
+Deploy Production	Set up job	2026-11-27T20:54:49.9531246Z Cloud: Azure
+Deploy Production	Set up job	2026-11-27T20:54:49.9531869Z ##[endgroup]
+Deploy Production	Set up job	2026-11-27T20:54:49.9533872Z ##[group]Operating System
+Deploy Production	Set up job	2026-11-27T20:54:49.9534636Z Ubuntu
+Deploy Production	Set up job	2026-11-27T20:54:49.9535268Z 26.04.1
+Deploy Production	Set up job	2026-11-27T20:54:49.9535878Z LTS
+Deploy Production	Set up job	2026-11-27T20:54:49.9536445Z ##[endgroup]
+Deploy Production	Set up job	2026-11-27T20:54:49.9537132Z ##[group]Runner Image
+Deploy Production	Set up job	2026-11-27T20:54:49.9537783Z Image: ubuntu-26.04
+Deploy Production	Set up job	2026-11-27T20:54:49.9538465Z Version: 20261122.9.1
+Deploy Production	Set up job	2026-11-27T20:54:49.9539860Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+Deploy Production	Set up job	2026-11-27T20:54:49.9541748Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+Deploy Production	Set up job	2026-11-27T20:54:49.9542774Z ##[endgroup]
+Deploy Production	Set up job	2026-11-27T20:54:49.9544086Z ##[group]GITHUB_TOKEN Permissions
+Deploy Production	Set up job	2026-11-27T20:54:49.9546215Z Contents: read
+Deploy Production	Set up job	2026-11-27T20:54:49.9547028Z Metadata: read
+Deploy Production	Set up job	2026-11-27T20:54:49.9547612Z ##[endgroup]
+Deploy Production	Set up job	2026-11-27T20:54:49.9550167Z Secret source: Actions
+Deploy Production	Set up job	2026-11-27T20:54:49.9551230Z Cache mode: write
+Deploy Production	Set up job	2026-11-27T20:54:49.9552014Z Prepare workflow directory
+Deploy Production	Set up job	2026-11-27T20:54:50.0034495Z Prepare all required actions
+Deploy Production	Set up job	2026-11-27T20:54:50.0084068Z Getting action download info
+Deploy Production	Set up job	2026-11-27T20:54:50.3933031Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Deploy Production	Set up job	2026-11-27T20:54:50.4919556Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+Deploy Production	Set up job	2026-11-27T20:54:50.8201248Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+Deploy Production	Set up job	2026-11-27T20:54:51.2801930Z Complete job name: Deploy Production
+Deploy Production	Checkout repository	﻿2026-11-27T20:54:51.3833694Z ##[group]Run actions/checkout@v4
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3834781Z with:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3835317Z   repository: lcz111/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3840726Z   token: ***
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3841235Z   ssh-strict: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3841735Z   ssh-user: git
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3842244Z   persist-credentials: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3842824Z   clean: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3843339Z   sparse-checkout-cone-mode: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3843948Z   fetch-depth: 1
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3844440Z   fetch-tags: false
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3844942Z   show-progress: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3845465Z   lfs: false
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3845928Z   submodules: false
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3846477Z   set-safe-directory: true
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3847081Z   allow-unsafe-pr-checkout: false
+Deploy Production	Checkout repository	2026-11-27T20:54:51.3847995Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6582936Z Syncing repository: lcz111/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6586078Z ##[group]Getting Git version info
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6587776Z Working directory is '/home/runner/work/acs730-coursework/acs730-coursework'
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6590296Z [command]/usr/bin/git version
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6617882Z git version 2.56.1
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6648563Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6670289Z Temporarily overriding HOME='/home/runner/work/_temp/417c036b-1885-41c7-a18b-30d0b02bac74' before making global git config changes
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6673463Z Adding repository directory to the temporary git global config as a safe directory
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6676581Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6760048Z Deleting the contents of '/home/runner/work/acs730-coursework/acs730-coursework'
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6765423Z ##[group]Initializing the repository
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6771974Z [command]/usr/bin/git init /home/runner/work/acs730-coursework/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6900509Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6902903Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6904865Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6906407Z hint: call:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6907170Z hint:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6908211Z hint: 	git config --global init.defaultBranch <name>
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6909647Z hint:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6910846Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6912886Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6914508Z hint:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6915368Z hint: 	git branch -m <name>
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6916321Z hint:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6917644Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6932595Z Initialized empty Git repository in /home/runner/work/acs730-coursework/acs730-coursework/.git/
+Deploy Production	Checkout repository	2026-11-27T20:54:51.6950379Z [command]/usr/bin/git remote add origin https://github.com/lcz111/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7020717Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7022387Z ##[group]Disabling automatic garbage collection
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7024796Z [command]/usr/bin/git config --local gc.auto 0
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7090782Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7092598Z ##[group]Setting up auth
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7099047Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7146736Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7706745Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy Production	Checkout repository	2026-11-27T20:54:51.7753948Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8052682Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8095275Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8401030Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8452970Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8454272Z ##[group]Fetching the repository
+Deploy Production	Checkout repository	2026-11-27T20:54:51.8464836Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a20a266191161f8867c59bd4202c75864a04d44d:refs/remotes/origin/main
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2733968Z From https://github.com/lcz111/acs730-coursework
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2736009Z  * [new ref]         a20a266191161f8867c59bd4202c75864a04d44d -> origin/main
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2742074Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2744231Z ##[group]Determining the checkout info
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2746856Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2751328Z [command]/usr/bin/git sparse-checkout disable
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2812118Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2850324Z ##[group]Checking out the ref
+Deploy Production	Checkout repository	2026-11-27T20:54:52.2853855Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy Production	Checkout repository	2026-11-27T20:54:52.3015790Z Switched to a new branch 'main'
+Deploy Production	Checkout repository	2026-11-27T20:54:52.3020269Z branch 'main' set up to track 'origin/main'.
+Deploy Production	Checkout repository	2026-11-27T20:54:52.3029200Z ##[endgroup]
+Deploy Production	Checkout repository	2026-11-27T20:54:52.3082881Z [command]/usr/bin/git log -1 --format=%H
+Deploy Production	Checkout repository	2026-11-27T20:54:52.3113499Z a20a266191161f8867c59bd4202c75864a04d44d
+Deploy Production	Configure AWS credentials	﻿2026-11-27T20:54:52.3649636Z ##[group]Run aws-actions/configure-aws-credentials@v4
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3651169Z with:
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3652436Z   aws-access-key-id: ***
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3654193Z   aws-secret-access-key: ***
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3668679Z   aws-session-token: ***
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3669876Z   aws-region: us-east-1
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3670954Z   audience: sts.amazonaws.com
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3672129Z   output-env-credentials: true
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.3673263Z ##[endgroup]
+Deploy Production	Configure AWS credentials	2026-11-27T20:54:52.7813859Z Proceeding with IAM user credentials
+Deploy Production	Setup Terraform	﻿2026-11-27T20:54:52.8055751Z ##[group]Run hashicorp/setup-terraform@v3
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8057067Z with:
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8057975Z   terraform_version: 1.10.3
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8059402Z   cli_config_credentials_hostname: app.terraform.io
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8060792Z   terraform_wrapper: true
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8061813Z env:
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8062690Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8063782Z   AWS_REGION: us-east-1
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8065087Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8066481Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8080138Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.8081168Z ##[endgroup]
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.9632084Z (node:2430) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Deploy Production	Setup Terraform	2026-11-27T20:54:52.9637908Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Deploy Production	Setup Terraform	2026-11-27T20:54:53.2235955Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/a55002ad-4888-456d-aff9-b7347a580846
+Deploy Production	Terraform Init	﻿2026-11-27T20:54:53.8310681Z ##[group]Run terraform init -input=false
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8311271Z ^[[36;1mterraform init -input=false^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8353994Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8354435Z env:
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8354762Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8355151Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8355742Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8356238Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8361205Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8361821Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Init	2026-11-27T20:54:53.8362405Z ##[endgroup]
+Deploy Production	Terraform Init	2026-11-27T20:54:54.1140920Z ^[[0m^[[1mInitializing the backend...^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:54:54.7176075Z ^[[0m^[[32m
+Deploy Production	Terraform Init	2026-11-27T20:54:54.7177240Z Successfully configured the backend "s3"! Terraform will automatically
+Deploy Production	Terraform Init	2026-11-27T20:54:54.7178633Z use this backend unless the backend configuration changes.^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:54:54.8844343Z ^[[0m^[[1mInitializing modules...^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:54:54.8870376Z - web in ../modules/web-infrastructure
+Deploy Production	Terraform Init	2026-11-27T20:54:54.8883148Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:54:54.8892567Z - Reusing previous version of hashicorp/aws from the dependency lock file
+Deploy Production	Terraform Init	2026-11-27T20:54:54.9651161Z - Installing hashicorp/aws v5.100.0...
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7082596Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7083475Z 
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7084428Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7085660Z ^[[0m^[[32m
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7086538Z You may now begin working with Terraform. Try running "terraform plan" to see
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7087881Z any changes that are required for your infrastructure. All Terraform commands
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7089274Z should now work.
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7089649Z 
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7090181Z If you ever set or change modules or backend configuration for Terraform,
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7091555Z rerun this command to reinitialize your working directory. If you forget, other
+Deploy Production	Terraform Init	2026-11-27T20:55:01.7093009Z commands will detect it and remind you to do so if necessary.^[[0m
+Deploy Production	Terraform Format Check	﻿2026-11-27T20:55:01.7273786Z ##[group]Run terraform fmt -check -recursive ..
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7274277Z ^[[36;1mterraform fmt -check -recursive ..^[[0m
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7308609Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7309229Z env:
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7309498Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7309799Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7310545Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7311187Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7315300Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7315732Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Format Check	2026-11-27T20:55:01.7316218Z ##[endgroup]
+Deploy Production	Terraform Validate	﻿2026-11-27T20:55:01.8815117Z ##[group]Run terraform validate
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8815689Z ^[[36;1mterraform validate^[[0m
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8862793Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8863364Z env:
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8863825Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8864309Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8865067Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8865753Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8871722Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8872169Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Validate	2026-11-27T20:55:01.8872608Z ##[endgroup]
+Deploy Production	Terraform Validate	2026-11-27T20:55:04.2815020Z ^[[32m^[[1mSuccess!^[[0m The configuration is valid.
+Deploy Production	Terraform Validate	2026-11-27T20:55:04.2815900Z ^[[0m
+Deploy Production	Terraform Plan	﻿2026-11-27T20:55:04.3062385Z ##[group]Run terraform plan -input=false -no-color -out=tfplan
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3063057Z ^[[36;1mterraform plan -input=false -no-color -out=tfplan^[[0m
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3097595Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3097983Z env:
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3098270Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3098606Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3099424Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3099922Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3104797Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3105298Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Plan	2026-11-27T20:55:04.3105843Z ##[endgroup]
+Deploy Production	Terraform Plan	2026-11-27T20:55:08.0674820Z module.web.data.aws_availability_zones.available: Reading...
+Deploy Production	Terraform Plan	2026-11-27T20:55:08.0676211Z module.web.data.aws_ami.al2023: Reading...
+Deploy Production	Terraform Plan	2026-11-27T20:55:08.3963045Z module.web.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1]
+Deploy Production	Terraform Plan	2026-11-27T20:55:08.8424914Z module.web.data.aws_ami.al2023: Read complete after 1s [id=ami-000d209a4fc9822c4]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0145441Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0147040Z Terraform used the selected providers to generate the following execution
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0148670Z plan. Resource actions are indicated with the following symbols:
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0155881Z   + create
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0156633Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0157167Z Terraform will perform the following actions:
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0158039Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0158602Z   # module.web.aws_instance.web[0] will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0159608Z   + resource "aws_instance" "web" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0160152Z       + ami                                  = "ami-000d209a4fc9822c4"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0160754Z       + arn                                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0161354Z       + associate_public_ip_address          = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0162003Z       + availability_zone                    = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0162718Z       + cpu_core_count                       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0163427Z       + cpu_threads_per_core                 = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0164065Z       + disable_api_stop                     = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0164684Z       + disable_api_termination              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0165288Z       + ebs_optimized                        = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0165698Z       + enable_primary_ipv6                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0166079Z       + get_password_data                    = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0166463Z       + host_id                              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0166837Z       + host_resource_group_arn              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0167258Z       + iam_instance_profile                 = "LabInstanceProfile"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0167654Z       + id                                   = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0168436Z       + instance_initiated_shutdown_behavior = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0169061Z       + instance_lifecycle                   = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0169593Z       + instance_state                       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0169953Z       + instance_type                        = "t3.micro"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0170308Z       + ipv6_address_count                   = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0170681Z       + ipv6_addresses                       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0171037Z       + key_name                             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0171387Z       + monitoring                           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0171754Z       + outpost_arn                          = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0172121Z       + password_data                        = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0172493Z       + placement_group                      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0173229Z       + placement_partition_number           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0173622Z       + primary_network_interface_id         = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0173997Z       + private_dns                          = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0174357Z       + private_ip                           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0174715Z       + public_dns                           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0175065Z       + public_ip                            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0175447Z       + secondary_private_ips                = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0175829Z       + security_groups                      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0176172Z       + source_dest_check                    = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0176536Z       + spot_instance_request_id             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0176903Z       + subnet_id                            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0177232Z       + tags                                 = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0177532Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0177815Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0178082Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0178351Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0178671Z           + "Name"        = "acs730-a1-chengzeli-prod-web-1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0179241Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0179508Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0179728Z       + tags_all                             = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0180017Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0180291Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0180562Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0180816Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0181114Z           + "Name"        = "acs730-a1-chengzeli-prod-web-1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0181435Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0181683Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0181917Z       + tenancy                              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0182319Z       + user_data                            = "05a6889d8fef97367bc8318b5b00b3fe58fc7fb6"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0182734Z       + user_data_base64                     = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0183084Z       + user_data_replace_on_change          = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0183451Z       + vpc_security_group_ids               = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0183690Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0183852Z       + capacity_reservation_specification (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184181Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184287Z       + cpu_options (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184507Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184619Z       + ebs_block_device (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184814Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0184918Z       + enclave_options (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0185277Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0185411Z       + ephemeral_block_device (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0185626Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0185750Z       + instance_market_options (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0185958Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0186077Z       + maintenance_options (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0186273Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0186374Z       + metadata_options {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0186640Z           + http_endpoint               = "enabled"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0186963Z           + http_protocol_ipv6          = "disabled"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0187302Z           + http_put_response_hop_limit = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0187638Z           + http_tokens                 = "required"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0187967Z           + instance_metadata_tags      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0188264Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0188378Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0188487Z       + network_interface (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0188686Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0188821Z       + private_dns_name_options (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0189502Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0189608Z       + root_block_device {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0189873Z           + delete_on_termination = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0190193Z           + device_name           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0190499Z           + encrypted             = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0190796Z           + iops                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0191115Z           + kms_key_id            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0191425Z           + tags_all              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0191733Z           + throughput            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0192051Z           + volume_id             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0192357Z           + volume_size           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0192661Z           + volume_type           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0192934Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0193132Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0193241Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0193394Z   # module.web.aws_internet_gateway.main will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0193732Z   + resource "aws_internet_gateway" "main" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0194029Z       + arn      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0194297Z       + id       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0194561Z       + owner_id = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0194816Z       + tags     = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0195042Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0195317Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0195582Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0195839Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0196143Z           + "Name"        = "acs730-a1-chengzeli-prod-igw"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0196458Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0196696Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0196914Z       + tags_all = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0197143Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0197415Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0197672Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0197931Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0198222Z           + "Name"        = "acs730-a1-chengzeli-prod-igw"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0198520Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0198765Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0199119Z       + vpc_id   = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0199376Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0199573Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0199724Z   # module.web.aws_route_table.public will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0200052Z   + resource "aws_route_table" "public" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0200340Z       + arn              = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0200631Z       + id               = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0200917Z       + owner_id         = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0201204Z       + propagating_vgws = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0201650Z       + route            = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0201887Z           + {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0202108Z               + cidr_block                 = "0.0.0.0/0"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0202447Z               + gateway_id                 = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0202778Z                 # (11 unchanged attributes hidden)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0203055Z             },
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0203246Z         ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0203437Z       + tags             = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0203683Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0203957Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0204224Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0204480Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0204795Z           + "Name"        = "acs730-a1-chengzeli-prod-public-rt"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0205127Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0205371Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0205564Z       + tags_all         = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0205827Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0206232Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0206488Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0206744Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0207050Z           + "Name"        = "acs730-a1-chengzeli-prod-public-rt"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0207367Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0207618Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0207829Z       + vpc_id           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0208097Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0208206Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0208394Z   # module.web.aws_route_table_association.public["a"] will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0208934Z   + resource "aws_route_table_association" "public" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0209265Z       + id             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0209556Z       + route_table_id = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0209953Z       + subnet_id      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0210312Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0210436Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0210617Z   # module.web.aws_route_table_association.public["b"] will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0211025Z   + resource "aws_route_table_association" "public" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0211336Z       + id             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0211610Z       + route_table_id = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0211891Z       + subnet_id      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0212148Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0212249Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0212378Z   # module.web.aws_security_group.web will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0212733Z   + resource "aws_security_group" "web" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0213028Z       + arn                    = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0213363Z       + description            = "Web ingress for ACS730 prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0213685Z       + egress                 = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0213920Z           + {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0214119Z               + cidr_blocks      = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0214382Z                   + "0.0.0.0/0",
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0214609Z                 ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0214835Z               + description      = "All outbound"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0215128Z               + from_port        = 0
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0215387Z               + ipv6_cidr_blocks = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0215648Z               + prefix_list_ids  = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0215920Z               + protocol         = "-1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0216186Z               + security_groups  = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0216444Z               + self             = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0216704Z               + to_port          = 0
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0216951Z             },
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0217140Z         ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0217361Z       + id                     = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0217652Z       + ingress                = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0217886Z           + {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0218083Z               + cidr_blocks      = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0218512Z                   + "0.0.0.0/0",
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0218754Z                 ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0219238Z               + description      = "HTTP from anywhere"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0219558Z               + from_port        = 80
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0219828Z               + ipv6_cidr_blocks = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0220094Z               + prefix_list_ids  = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0220357Z               + protocol         = "tcp"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0220633Z               + security_groups  = []
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0220891Z               + self             = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0221147Z               + to_port          = 80
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0221389Z             },
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0221607Z         ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0221849Z       + name                   = "acs730-a1-chengzeli-prod-web"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0222196Z       + name_prefix            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0222511Z       + owner_id               = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0222812Z       + revoke_rules_on_delete = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0223210Z       + tags                   = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0223463Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0223737Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0223991Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0224244Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0224559Z           + "Name"        = "acs730-a1-chengzeli-prod-web-sg"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0224871Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0225113Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0225311Z       + tags_all               = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0225562Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0225829Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0226088Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0226337Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0226634Z           + "Name"        = "acs730-a1-chengzeli-prod-web-sg"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0226955Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0227202Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0227414Z       + vpc_id                 = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0227697Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0227800Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0227943Z   # module.web.aws_subnet.public["a"] will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0228260Z   + resource "aws_subnet" "public" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0228585Z       + arn                                            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0229233Z       + assign_ipv6_address_on_creation                = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0229848Z       + availability_zone                              = "us-east-1a"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0230312Z       + availability_zone_id                           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0230739Z       + cidr_block                                     = "10.44.1.0/24"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0231108Z       + enable_dns64                                   = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0231484Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0231883Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0232246Z       + id                                             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0232670Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0233072Z       + ipv6_native                                    = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0233429Z       + map_public_ip_on_launch                        = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0233795Z       + owner_id                                       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0234213Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0234605Z       + tags                                           = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0234909Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0235190Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0235451Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0235899Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0236218Z           + "Name"        = "acs730-a1-chengzeli-prod-public-a"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0236541Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0236791Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0237012Z       + tags_all                                       = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0237306Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0237576Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0237833Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0238083Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0238400Z           + "Name"        = "acs730-a1-chengzeli-prod-public-a"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0238719Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0239127Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0239378Z       + vpc_id                                         = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0239685Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0239792Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0239935Z   # module.web.aws_subnet.public["b"] will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0240416Z   + resource "aws_subnet" "public" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0240727Z       + arn                                            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0241091Z       + assign_ipv6_address_on_creation                = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0241488Z       + availability_zone                              = "us-east-1b"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0241903Z       + availability_zone_id                           = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0242301Z       + cidr_block                                     = "10.44.2.0/24"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0242663Z       + enable_dns64                                   = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0243016Z       + enable_resource_name_dns_a_record_on_launch    = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0243400Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0243766Z       + id                                             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0244178Z       + ipv6_cidr_block_association_id                 = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0244577Z       + ipv6_native                                    = false
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0244925Z       + map_public_ip_on_launch                        = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0245286Z       + owner_id                                       = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0245708Z       + private_dns_hostname_type_on_launch            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0246099Z       + tags                                           = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0246397Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0246671Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0246934Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0247188Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0247493Z           + "Name"        = "acs730-a1-chengzeli-prod-public-b"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0247807Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0248054Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0248269Z       + tags_all                                       = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0248567Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0248963Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0249234Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0249489Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0249800Z           + "Name"        = "acs730-a1-chengzeli-prod-public-b"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0250116Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0250358Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0250609Z       + vpc_id                                         = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0250926Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0251034Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0251144Z   # module.web.aws_vpc.main will be created
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0251437Z   + resource "aws_vpc" "main" {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0251715Z       + arn                                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0252193Z       + cidr_block                           = "10.44.0.0/16"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0252565Z       + default_network_acl_id               = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0252946Z       + default_route_table_id               = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0253324Z       + default_security_group_id            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0253704Z       + dhcp_options_id                      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0254047Z       + enable_dns_hostnames                 = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0254363Z       + enable_dns_support                   = true
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0254723Z       + enable_network_address_usage_metrics = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0255078Z       + id                                   = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0255402Z       + instance_tenancy                     = "default"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0255762Z       + ipv6_association_id                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0256129Z       + ipv6_cidr_block                      = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0256629Z       + ipv6_cidr_block_network_border_group = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0257011Z       + main_route_table_id                  = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0257366Z       + owner_id                             = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0257678Z       + tags                                 = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0257973Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0258246Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0258510Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0258768Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0259357Z           + "Name"        = "acs730-a1-chengzeli-prod-vpc"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0259669Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0259919Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0260123Z       + tags_all                             = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0260408Z           + "Assignment"  = "assignment1"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0260690Z           + "Course"      = "ACS730"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0260944Z           + "Environment" = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0261191Z           + "Managed"     = "terraform"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0261477Z           + "Name"        = "acs730-a1-chengzeli-prod-vpc"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0261780Z           + "Owner"       = "chengzeli"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262015Z         }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262189Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262297Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262406Z Plan: 9 to add, 0 to change, 0 to destroy.
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262591Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262683Z Changes to Outputs:
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0262903Z   + environment       = "prod"
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0263152Z   + instance_ids      = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0263383Z       + (known after apply),
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0263601Z     ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0263815Z   + security_group_id = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0264088Z   + subnet_ids        = {
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0264318Z       + a = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0264565Z       + b = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0264793Z     }
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0264988Z   + vpc_id            = (known after apply)
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0265258Z   + web_public_ips    = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0265493Z       + (known after apply),
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0265716Z     ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0265901Z   + web_urls          = [
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0266136Z       + (known after apply),
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0266359Z     ]
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0266462Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0266942Z ─────────────────────────────────────────────────────────────────────────────
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0267221Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0267322Z Saved the plan to: tfplan
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0267472Z 
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0267667Z To perform exactly these actions, run the following command to apply:
+Deploy Production	Terraform Plan	2026-11-27T20:55:09.0268049Z     terraform apply "tfplan"
+Deploy Production	Terraform Apply	﻿2026-11-27T20:55:09.2272374Z ##[group]Run terraform apply -input=false -no-color tfplan
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2272890Z ^[[36;1mterraform apply -input=false -no-color tfplan^[[0m
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2306559Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2306846Z env:
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2307066Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2307334Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2307723Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2308082Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2312351Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2312780Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Apply	2026-11-27T20:55:09.2313243Z ##[endgroup]
+Deploy Production	Terraform Apply	2026-11-27T20:55:12.6799411Z module.web.aws_vpc.main: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:22.6791135Z module.web.aws_vpc.main: Still creating... [10s elapsed]
+Deploy Production	Terraform Apply	2026-11-27T20:55:25.3826457Z module.web.aws_vpc.main: Creation complete after 12s [id=vpc-0e505bd534a31c7c3]
+Deploy Production	Terraform Apply	2026-11-27T20:55:25.3860382Z module.web.aws_internet_gateway.main: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:25.3890588Z module.web.aws_subnet.public["b"]: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:25.3891614Z module.web.aws_subnet.public["a"]: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:25.3912971Z module.web.aws_security_group.web: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:26.1325727Z module.web.aws_internet_gateway.main: Creation complete after 1s [id=igw-0deb0450dc4d48bd2]
+Deploy Production	Terraform Apply	2026-11-27T20:55:26.1363913Z module.web.aws_route_table.public: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:27.4460471Z module.web.aws_route_table.public: Creation complete after 1s [id=rtb-0618683383c133a0e]
+Deploy Production	Terraform Apply	2026-11-27T20:55:28.7664765Z module.web.aws_security_group.web: Creation complete after 4s [id=sg-0ad332a5a41014aa1]
+Deploy Production	Terraform Apply	2026-11-27T20:55:35.3893450Z module.web.aws_subnet.public["b"]: Still creating... [10s elapsed]
+Deploy Production	Terraform Apply	2026-11-27T20:55:35.3894579Z module.web.aws_subnet.public["a"]: Still creating... [10s elapsed]
+Deploy Production	Terraform Apply	2026-11-27T20:55:36.9029324Z module.web.aws_subnet.public["b"]: Creation complete after 12s [id=subnet-062072b8d3008de8b]
+Deploy Production	Terraform Apply	2026-11-27T20:55:36.9280514Z module.web.aws_subnet.public["a"]: Creation complete after 12s [id=subnet-08a635a35677f1498]
+Deploy Production	Terraform Apply	2026-11-27T20:55:36.9310181Z module.web.aws_route_table_association.public["b"]: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:36.9311419Z module.web.aws_route_table_association.public["a"]: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:37.4706429Z module.web.aws_route_table_association.public["b"]: Creation complete after 0s [id=rtbassoc-0124f664fd47626e5]
+Deploy Production	Terraform Apply	2026-11-27T20:55:37.5756525Z module.web.aws_route_table_association.public["a"]: Creation complete after 1s [id=rtbassoc-02b94dc927588b0c7]
+Deploy Production	Terraform Apply	2026-11-27T20:55:37.5843974Z module.web.aws_instance.web[0]: Creating...
+Deploy Production	Terraform Apply	2026-11-27T20:55:47.5854750Z module.web.aws_instance.web[0]: Still creating... [10s elapsed]
+Deploy Production	Terraform Apply	2026-11-27T20:55:51.7074279Z module.web.aws_instance.web[0]: Creation complete after 14s [id=i-095f1791faec42b6f]
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3883858Z 
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3884856Z Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3885447Z 
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3885661Z Outputs:
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3885912Z 
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3886395Z environment = "prod"
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3899824Z instance_ids = [
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3900318Z   "i-095f1791faec42b6f",
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3900902Z ]
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3901307Z security_group_id = "sg-0ad332a5a41014aa1"
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3901977Z subnet_ids = {
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3902494Z   "a" = "subnet-08a635a35677f1498"
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3903175Z   "b" = "subnet-062072b8d3008de8b"
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3903807Z }
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3904307Z vpc_id = "vpc-0e505bd534a31c7c3"
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3904956Z web_public_ips = [
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3905478Z   "44.220.179.228",
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3905988Z ]
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3906440Z web_urls = [
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3907047Z   "http://44.220.179.228",
+Deploy Production	Terraform Apply	2026-11-27T20:55:52.3907442Z ]
+Deploy Production	Terraform Outputs	﻿2026-11-27T20:55:52.4152748Z ##[group]Run terraform output -no-color
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4153168Z ^[[36;1mterraform output -no-color^[[0m
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4186818Z shell: /usr/bin/bash -e {0}
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4187127Z env:
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4187373Z   AWS_DEFAULT_REGION: us-east-1
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4187661Z   AWS_REGION: us-east-1
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4188084Z   AWS_ACCESS_KEY_ID: ***
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4189094Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4193457Z   AWS_SESSION_TOKEN: ***
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4193916Z   TERRAFORM_CLI_PATH: /home/runner/work/_temp/bbcd91b1-d089-4faf-940f-eb2e6761d7ea
+Deploy Production	Terraform Outputs	2026-11-27T20:55:52.4194408Z ##[endgroup]
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9127344Z environment = "prod"
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9128491Z instance_ids = [
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9129483Z   "i-095f1791faec42b6f",
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9130033Z ]
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9130493Z security_group_id = "sg-0ad332a5a41014aa1"
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9131097Z subnet_ids = {
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9131473Z   "a" = "subnet-08a635a35677f1498"
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9131991Z   "b" = "subnet-062072b8d3008de8b"
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9132632Z }
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9132972Z vpc_id = "vpc-0e505bd534a31c7c3"
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9133396Z web_public_ips = [
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9133666Z   "44.220.179.228",
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9133926Z ]
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9134156Z web_urls = [
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9134441Z   "http://44.220.179.228",
+Deploy Production	Terraform Outputs	2026-11-27T20:55:53.9134767Z ]
+Deploy Production	Post Configure AWS credentials	﻿2026-11-27T20:55:53.9377967Z Post job cleanup.
+Deploy Production	Post Checkout repository	﻿2026-11-27T20:55:54.1181477Z Post job cleanup.
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2189265Z [command]/usr/bin/git version
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2243503Z git version 2.56.1
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2290568Z Temporarily overriding HOME='/home/runner/work/_temp/88131870-d9ee-40c6-90db-af6f4e8d5cfb' before making global git config changes
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2292814Z Adding repository directory to the temporary git global config as a safe directory
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2297494Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2490375Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.2536984Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.4180527Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.4222279Z http.https://github.com/.extraheader
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.4238209Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.5113728Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.5470038Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy Production	Post Checkout repository	2026-11-27T20:55:54.5518168Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy Production	Complete job	﻿2026-11-27T20:55:54.6024291Z Cleaning up orphan processes
+Deploy Production	Complete job	2026-11-27T20:55:54.6464222Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
