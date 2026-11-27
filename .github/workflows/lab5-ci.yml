@@ -5,6 +5,8 @@ on:
     paths:
       - "lab5/**"
       - "lab6/**"
+      - "assignment1/**"
+      - ".github/workflows/assignment1-deploy.yml"
       - ".github/workflows/lab5-ci.yml"
   push:
     branches:
