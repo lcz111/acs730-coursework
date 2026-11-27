@@ -1,0 +1,81 @@
+{
+  "total_count": 2,
+  "environments": [
+    {
+      "id": 28795492953,
+      "node_id": "EN_kwDOUp7gHc8AAAAGtFhaWQ",
+      "name": "prod",
+      "url": "https://api.github.com/repos/lcz111/acs730-coursework/environments/prod",
+      "html_url": "https://github.com/lcz111/acs730-coursework/deployments/activity_log?environments_filter=prod",
+      "created_at": "2026-11-27T20:01:19Z",
+      "updated_at": "2026-11-27T20:02:00Z",
+      "can_admins_bypass": false,
+      "protection_rules": [
+        {
+          "id": 74287283,
+          "node_id": "GA_kwDOUp7gHc4EbYiz",
+          "type": "required_reviewers",
+          "prevent_self_review": false,
+          "reviewers": [
+            {
+              "type": "User",
+              "reviewer": {
+                "login": "lcz111",
+                "id": 94715825,
+                "node_id": "U_kgDOBaU_sQ",
+                "avatar_url": "https://avatars.githubusercontent.com/u/94715825?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/lcz111",
+                "html_url": "https://github.com/lcz111",
+                "followers_url": "https://api.github.com/users/lcz111/followers",
+                "following_url": "https://api.github.com/users/lcz111/following{/other_user}",
+                "gists_url": "https://api.github.com/users/lcz111/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/lcz111/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/lcz111/subscriptions",
+                "organizations_url": "https://api.github.com/users/lcz111/orgs",
+                "repos_url": "https://api.github.com/users/lcz111/repos",
+                "events_url": "https://api.github.com/users/lcz111/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/lcz111/received_events",
+                "type": "User",
+                "user_view_type": "public",
+                "site_admin": false
+              }
+            }
+          ]
+        },
+        {
+          "id": 74287328,
+          "node_id": "GA_kwDOUp7gHc4EbYjg",
+          "type": "branch_policy"
+        }
+      ],
+      "deployment_branch_policy": {
+        "protected_branches": false,
+        "custom_branch_policies": true
+      }
+    },
+    {
+      "id": 28795393676,
+      "node_id": "EN_kwDOUp7gHc8AAAAGtFbWjA",
+      "name": "staging",
+      "url": "https://api.github.com/repos/lcz111/acs730-coursework/environments/staging",
+      "html_url": "https://github.com/lcz111/acs730-coursework/deployments/activity_log?environments_filter=staging",
+      "created_at": "2026-11-27T20:00:04Z",
+      "updated_at": "2026-11-27T20:00:04Z",
+      "can_admins_bypass": true,
+      "protection_rules": [],
+      "deployment_branch_policy": null
+    }
+  ],
+  "prod_deployment_branch_policies": {
+    "total_count": 1,
+    "branch_policies": [
+      {
+        "id": 68551716,
+        "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2ODU1MTcxNg==",
+        "name": "main",
+        "type": "branch"
+      }
+    ]
+  }
+}
