@@ -315,6 +315,32 @@ The successful staging and production deployments demonstrate that this approach
 
 For a future production implementation, I would introduce OIDC federation, separate IAM roles, and independent production reviewers. If the organization later requires extensive VPC-internal access or centralized AWS governance, an AWS-native pipeline should be reconsidered.
 
+## Task 9 - Teardown and Cleanup
+
+After completing the deployment, monitoring, and evidence collection, all three Terraform environments were destroyed using terraform destroy.
+
+| Environment | Resources Destroyed |
+|---|---:|
+| Production | 9 |
+| Staging | 9 |
+| Development | 10 |
+| Total | 28 |
+
+All three destroy operations completed successfully on November 27, 2026, at 21:59:02 UTC.
+
+The development environment included one additional resource, the CloudWatch CPU utilization alarm.
+
+After destruction, terraform state list returned no resources for any of the three environments. The manually created SSM parameter was then deleted using the AWS CLI. A subsequent GetParameter request returned ParameterNotFound, confirming its removal.
+
+The cleanup-check.sh script was executed. It identified the existing EC2 workstation, its associated security group, and a Terraform state file from midterm practice. These items were outside the scope of Assignment 1 and were preserved. The shared S3 backend bucket was also retained.
+
+Additional AWS CLI checks returned empty results for Assignment 1 EC2 instances in non-terminated states, VPCs, security groups, and the CloudWatch alarm.
+
+These results confirm that the infrastructure deployed for Assignment 1 was successfully removed without affecting the workstation or unrelated coursework.
+
+Evidence: [destroy-complete.txt](evidence/destroy-complete.txt)
+
+
 ## Conclusion
 
 This assignment successfully demonstrated a multi-environment infrastructure deployment solution using Terraform, GitHub Actions, and AWS.
