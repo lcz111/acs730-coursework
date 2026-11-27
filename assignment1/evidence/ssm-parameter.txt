@@ -1,0 +1,21 @@
+=== Evidence captured at ===
+Fri Nov 27 21:17:17 UTC 2026
+
+=== AWS SSM Parameter ===
+{
+    "Parameter": {
+        "Name": "/acs730/assignment1/app-config",
+        "Type": "String",
+        "Value": "assignment1-web-v1",
+        "Version": 1,
+        "LastModifiedDate": "2026-11-27T21:04:40.455000+00:00",
+        "ARN": "arn:aws:ssm:us-east-1:195356629135:parameter/acs730/assignment1/app-config",
+        "DataType": "text"
+    }
+}
+
+=== Terraform SSM Data Source ===
+module.web.data.aws_ssm_parameter.app_config
+
+=== Parameter Value Read by Terraform ===
+assignment1-web-v1

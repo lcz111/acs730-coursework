@@ -37,3 +37,14 @@ output "environment" {
   description = "Name of the deployment environment."
   value       = var.environment
 }
+
+output "ssm_parameter_value" {
+  description = "Application configuration read from SSM Parameter Store"
+  value       = data.aws_ssm_parameter.app_config.value
+  sensitive   = true
+}
+
+output "cloudwatch_alarm_name" {
+  description = "Name of the CPU utilization alarm when enabled"
+  value       = var.enable_cloudwatch_alarm ? aws_cloudwatch_metric_alarm.cpu_high[0].alarm_name : null
+}

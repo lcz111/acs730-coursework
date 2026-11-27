@@ -108,3 +108,15 @@ variable "iam_instance_profile" {
   type        = string
   default     = "LabInstanceProfile"
 }
+
+variable "ssm_parameter_name" {
+  description = "Name of the externally managed SSM parameter"
+  type        = string
+  default     = "/acs730/assignment1/app-config"
+}
+
+variable "enable_cloudwatch_alarm" {
+  description = "Whether to create an EC2 CPU utilization alarm"
+  type        = bool
+  default     = false
+}

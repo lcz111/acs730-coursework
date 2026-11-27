@@ -29,3 +29,14 @@ output "security_group_id" {
 output "artifact_bucket" {
   value = module.web.artifact_bucket
 }
+
+output "ssm_parameter_value" {
+  description = "Application configuration read from SSM Parameter Store"
+  value       = module.web.ssm_parameter_value
+  sensitive   = true
+}
+
+output "cloudwatch_alarm_name" {
+  description = "CloudWatch CPU utilization alarm name"
+  value       = module.web.cloudwatch_alarm_name
+}
