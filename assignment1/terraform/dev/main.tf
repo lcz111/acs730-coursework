@@ -1,5 +1,7 @@
 module "web" {
-  source = "../modules/web-infrastructure"
+  enable_cloudwatch_alarm = true
+  ssm_parameter_name      = "/acs730/assignment1/app-config"
+  source                  = "../modules/web-infrastructure"
 
   project     = "acs730-a1"
   owner       = "chengzeli"
